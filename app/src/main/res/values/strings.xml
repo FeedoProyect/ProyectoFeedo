@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Feedo</string>
+    <string name="Subtitulo">Tranquilo!, nos encargaremos que sea una experiencia sabrosa y llevadera!</string>
+    <string name="Titulo">¿Con hambre?</string>
+    <string name="Boton">¡Comencemos!</string>
 </resources>
