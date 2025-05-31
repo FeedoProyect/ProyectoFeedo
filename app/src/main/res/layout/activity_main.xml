@@ -2,37 +2,49 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/fondo">
 
-    <!-- Logo -->
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+
+    <View
+        android:id="@+id/darkOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#88000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Título -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="308dp"
+        android:layout_height="326dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Titulo"
-        android:textSize="28sp"
-        android:textColor="#1E1F22"
+        android:textSize="49sp"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:fontFamily="@font/BalooInicio"
+        android:fontFamily="@font/balooinicio"
         app:layout_constraintTop_toBottomOf="@id/logoImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="7dp"/>
 
     <!-- Subtítulo -->
     <TextView
@@ -40,14 +52,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Subtitulo"
-        android:textSize="18sp"
-        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginTop="8dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:fontFamily="@font/BalooInicio"
+        android:fontFamily="@font/balooinicio"
         app:layout_constraintTop_toBottomOf="@id/titleText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -55,18 +67,21 @@
     <!-- Botón -->
     <Button
         android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Boton"
-        android:textAllCaps="false"
+        android:layout_width="330dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="46dp"
         android:backgroundTint="#FFA500"
-        android:textColor="@color/black"
-        android:padding="12dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/BalooInicio"
-        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        android:fontFamily="@font/balooinicio"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:text="@string/Boton"
+        android:textSize="30dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/subtitleText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
