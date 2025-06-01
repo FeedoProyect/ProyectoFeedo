@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Feedo</string>
+    
+    
+    <string name="Tittle">Feedo</string>
+    <string name="hintBuscador">¿Qué se te antoja hoy?</string>
+
+    <string name="Historial">Historial</string>
+    <string name="Favoritos">Favoritos</string>
+    <string name="Catalogo">Elije tu comida</string>
+    <string name="Rapidas">Recetas rapidas</string>
+    <string name="Riquisimas">Riquisimas!</string>
+    <string name="Vegetarianas">Vegetarianas</string>
+</resources>

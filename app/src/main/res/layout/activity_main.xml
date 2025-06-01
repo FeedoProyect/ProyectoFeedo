@@ -1,0 +1,296 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/VistaTitulo"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:background="#FFDD9A"
+        tools:ignore="MissingConstraints">
+    </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tittle"
+        android:textSize="23sp"
+        android:fontFamily="@font/balo_thambi"
+        android:textColor="#FFAC00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp">
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/edittext_corner"
+        android:gravity="start"
+        android:hint="@string/hintBuscador"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="90dp">
+
+    </EditText>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Historial"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Favoritos"
+            app:layout_constraintTop_toBottomOf="@+id/VistaTitulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/historialsvg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Historial"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="25dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Favoritos"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Historial"
+            app:layout_constraintTop_toBottomOf="@+id/VistaTitulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/corazonsvg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Favoritos"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="25dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/CatalogoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Catalogo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Historial"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/CatalogoText"
+            app:layout_constraintTop_toBottomOf="@+id/Historial">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/piquitofeedosvg"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCatalogos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/CatalogoText"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/RapidasText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Rapidas"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvCatalogos"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/RapidasText"
+            app:layout_constraintTop_toBottomOf="@+id/rvCatalogos">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/piquitofeedosvg"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRapidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RapidasText"/>
+
+        <TextView
+            android:id="@+id/RiquisimasText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Riquisimas"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvRapidas"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/RiquisimasText"
+            app:layout_constraintTop_toBottomOf="@+id/rvRapidas">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/piquitofeedosvg"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRiquisimas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RiquisimasText"/>
+
+        <TextView
+            android:id="@+id/CriollasText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Vegetarianas"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvRiquisimas"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/CriollasText"
+            app:layout_constraintTop_toBottomOf="@+id/rvRiquisimas">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/piquitofeedosvg"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCriollas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/CriollasText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
