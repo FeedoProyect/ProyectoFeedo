@@ -2,5 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<<<<<<< HEAD
     <color name="Prueba">#03A9F4</color>
+=======
+>>>>>>> d89aa01216c1b78f8ac232a956ea1c2e3877a8ce
 </resources>

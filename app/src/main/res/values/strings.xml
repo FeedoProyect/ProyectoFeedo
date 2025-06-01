@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Feedo</string>
+<<<<<<< HEAD
     
     
     <string name="Tittle">Feedo</string>
@@ -11,4 +12,9 @@
     <string name="Rapidas">Recetas rapidas</string>
     <string name="Riquisimas">Riquisimas!</string>
     <string name="Vegetarianas">Vegetarianas</string>
+=======
+    <string name="Subtitulo">¡Tranquilo! Nos encargaremos de que sea una experiencia sabrosa y llevadera.</string>
+    <string name="Titulo">¿Con hambre?</string>
+    <string name="Boton">¡Comencemos!</string>
+>>>>>>> d89aa01216c1b78f8ac232a956ea1c2e3877a8ce
 </resources>

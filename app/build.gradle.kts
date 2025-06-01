@@ -4,12 +4,21 @@ plugins {
 }
 
 android {
+<<<<<<< HEAD
     namespace = "com.benjamin.feedo"
     compileSdk = 35
 
     defaultConfig {
         applicationId = "com.benjamin.feedo"
         minSdk = 24
+=======
+    namespace = "com.greco.feedo"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.greco.feedo"
+        minSdk = 21
+>>>>>>> d89aa01216c1b78f8ac232a956ea1c2e3877a8ce
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"

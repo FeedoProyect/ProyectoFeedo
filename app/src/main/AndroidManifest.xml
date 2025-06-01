@@ -13,7 +13,17 @@
         android:theme="@style/Theme.Feedo"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".MenuActivity"
+=======
+            android:name=".Almuerzo.AlmuerzoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".inicio.InicioActivity"
+>>>>>>> d89aa01216c1b78f8ac232a956ea1c2e3877a8ce
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
